@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Cars_Merge._Scripts.ControllerRelated;
+using _Draw_Copy._Scripts.ControllerRelated;
 using UnityEngine;
 
 namespace _Cars_Merge._Scripts.ElementRelated
@@ -35,6 +36,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
             if(!_canInstantiate) return;
             CarsController.instance.SpawnCar(transform);
             MainController.instance.SetActionType(GameState.Movement);
+            SoundsController.instance.PlaySound(SoundsController.instance.arrowTap);
         }
     
     }   

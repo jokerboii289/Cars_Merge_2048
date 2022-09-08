@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Cars_Merge._Scripts.ControllerRelated;
+using _Draw_Copy._Scripts.ControllerRelated;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Cars_Merge._Scripts.ElementRelated
@@ -47,6 +49,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 _rb.isKinematic = true;
                 MainController.instance.SetActionType(GameState.Input);
                 gameObject.layer = 3;
+                PlayCrashEffect();
             }
         }
 
@@ -54,9 +57,32 @@ namespace _Cars_Merge._Scripts.ElementRelated
         {
             GetComponent<Collider>().enabled = false;
             otherCar.GetComponent<Collider>().enabled = false;
-            CarsController.instance.SetupMergedCar(transform, _carElement.num * 2);
+            CarsController.instance.SetupMergedCar(otherCar.transform, _carElement.num * 2);
+            GameObject mergeFx = otherCar.GetComponent<CarElement>().mergeFx;
+            mergeFx.transform.parent = null;
+            mergeFx.SetActive(true);
             gameObject.SetActive(false);
             otherCar.SetActive(false);
+        }
+
+        void PlayCrashEffect()
+        {
+            if(transform.localEulerAngles.y < 85 || transform.localEulerAngles.y < 0)
+            {
+                float origZPos = transform.localPosition.z;
+                transform.DOLocalMoveZ(origZPos - 0.5f, 0.25f).OnComplete(() =>
+                {
+                    transform.DOLocalMoveZ(origZPos, 0.25f);
+                });
+            }else if(transform.localEulerAngles.y > 85)
+            {
+                float origXPos = transform.localPosition.x;
+                transform.DOLocalMoveX(origXPos - 0.5f, 0.25f).OnComplete(() =>
+                {
+                    transform.DOLocalMoveX(origXPos, 0.25f);
+                });
+            }
+            SoundsController.instance.PlaySound(SoundsController.instance.crash);
         }
     }
 }

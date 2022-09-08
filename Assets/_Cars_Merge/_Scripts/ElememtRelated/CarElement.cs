@@ -10,6 +10,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
     {
         public TextMeshPro numText;
         public int num;
+        public GameObject mergeFx;
 
         private void Start()
         {

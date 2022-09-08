@@ -13,6 +13,8 @@
               <e p="CarsController.cs" t="Include" />
               <e p="GameController.cs" t="Include" />
               <e p="MainController.cs" t="Include" />
+              <e p="SoundsController.cs" t="Include" />
+              <e p="UIController.cs" t="Include" />
             </e>
             <e p="ElememtRelated" t="Include">
               <e p="ArrowElement.cs" t="Include" />
@@ -58,6 +60,11 @@
           <e p="readme_DOTweenPro.txt" t="Include" />
         </e>
         <e p="JMO Assets" t="Include">
+          <e p="Cartoon FX (legacy)" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="CFXM_MobileParticleAdd_Alpha8.shader" t="Include" />
+            </e>
+          </e>
           <e p="Toony Colors Pro" t="Include">
             <e p="!ToonyColorsPro Readme.txt" t="Include" />
             <e p="Demo TCP2" t="Include">

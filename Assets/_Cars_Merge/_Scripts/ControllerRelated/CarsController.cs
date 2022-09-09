@@ -25,6 +25,7 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         public Dictionary<int, GameObject> carNumPair = new Dictionary<int, GameObject>();
         public Dictionary<int, Sprite> carImgPair = new Dictionary<int, Sprite>();
         public int targetCarNum;
+        public GameObject mergeFx;
 
         private void Start()
         {
@@ -46,6 +47,7 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         {
             dir = refObj.forward;
             GameObject newcar = Instantiate(currentCar, refObj.position, refObj.rotation);
+            newcar.GetComponent<CarElement>().engineSmoke.SetActive(true);
             currentCar = GetCurrentCar();
             SetCarInUI();
         }
@@ -55,6 +57,7 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             int carNum = currentCar.GetComponent<CarElement>().num;
             nextCarNumText.text = carNum.ToString();
             nextCarImg.sprite = carImgPair[carNum];
+            nextCarImg.GetComponent<RectTransform>().DOAnchorPos(new Vector2(122f, -177f), 0.25f).From();
         }
         public void SetupMergedCar(Transform refObj, int num)
         {
@@ -69,7 +72,8 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             {
                 newcar.transform.DOMoveY(origY, 0.5f);
             });
-            
+            GameObject fx = Instantiate(mergeFx, refObj.position, Quaternion.identity);
+            fx.transform.parent = newcar.transform;
             if(newcar.GetComponent<CarElement>().num == targetCarNum)
                 MainController.instance.SetActionType(GameState.Levelwin);
         }

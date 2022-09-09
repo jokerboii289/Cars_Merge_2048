@@ -27,6 +27,14 @@ namespace _Cars_Merge._Scripts.ElementRelated
             {
                 _canInstantiate = false;
             }
+            if(newState==GameState.Levelwin)
+            {
+                _canInstantiate = false;
+            }
+            if(newState==GameState.Levelfail)
+            {
+                _canInstantiate = false;
+            }
         
         }
 

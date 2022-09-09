@@ -65,6 +65,18 @@
               <e p="CFXM_MobileParticleAdd_Alpha8.shader" t="Include" />
             </e>
           </e>
+          <e p="Cartoon FX Remaster" t="Include">
+            <e p="CFXR Assets" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="CFXR Particle Glow.shader" t="Include" />
+                <e p="CFXR Particle Procedural Ring.shader" t="Include" />
+                <e p="CFXR Particle Ubershader.shader" t="Include" />
+                <e p="CFXR.cginc" t="Include" />
+                <e p="CFXR_SETTINGS.cginc" t="Include" />
+                <e p="CFXR_URP.cginc" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Toony Colors Pro" t="Include">
             <e p="!ToonyColorsPro Readme.txt" t="Include" />
             <e p="Demo TCP2" t="Include">

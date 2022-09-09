@@ -32,12 +32,14 @@ namespace _Cars_Merge._Scripts.ElementRelated
         {
             if (other.gameObject.CompareTag("car"))
             {
+                _carElement.engineSmoke.SetActive(false);
                 if (_carElement.num != other.gameObject.GetComponent<CarElement>().num)
                 {
                     moveSpeed = 0;
                     _rb.isKinematic = true;
                     MainController.instance.SetActionType(GameState.Input);
                     gameObject.layer = 3;
+                    PlayCrashEffect();
                 }
                 else if(_carElement.num == other.gameObject.GetComponent<CarElement>().num && other.gameObject.layer == 3)
                     Merge(other.gameObject);
@@ -50,6 +52,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 MainController.instance.SetActionType(GameState.Input);
                 gameObject.layer = 3;
                 PlayCrashEffect();
+                _carElement.engineSmoke.SetActive(false);
             }
         }
 
@@ -58,25 +61,25 @@ namespace _Cars_Merge._Scripts.ElementRelated
             GetComponent<Collider>().enabled = false;
             otherCar.GetComponent<Collider>().enabled = false;
             CarsController.instance.SetupMergedCar(otherCar.transform, _carElement.num * 2);
-            GameObject mergeFx = otherCar.GetComponent<CarElement>().mergeFx;
+            /*GameObject mergeFx = otherCar.GetComponent<CarElement>().mergeFx;
             mergeFx.transform.parent = null;
-            mergeFx.SetActive(true);
+            mergeFx.SetActive(true);*/
             gameObject.SetActive(false);
             otherCar.SetActive(false);
         }
 
         void PlayCrashEffect()
         {
-            if(transform.localEulerAngles.y < 85 || transform.localEulerAngles.y < 0)
+            if(transform.rotation.y < .5)
             {
-                float origZPos = transform.localPosition.z;
-                transform.DOLocalMoveZ(origZPos - 0.5f, 0.25f).OnComplete(() =>
+                float origZPos = transform.position.z;
+                transform.DOMoveZ(origZPos - 0.5f, 0.25f).OnComplete(() =>
                 {
-                    transform.DOLocalMoveZ(origZPos, 0.25f);
+                    transform.DOMoveZ(origZPos, 0.25f);
                 });
-            }else if(transform.localEulerAngles.y > 85)
+            }else if(transform.rotation.y > .5)
             {
-                float origXPos = transform.localPosition.x;
+                 float origXPos = transform.localPosition.x;
                 transform.DOLocalMoveX(origXPos - 0.5f, 0.25f).OnComplete(() =>
                 {
                     transform.DOLocalMoveX(origXPos, 0.25f);

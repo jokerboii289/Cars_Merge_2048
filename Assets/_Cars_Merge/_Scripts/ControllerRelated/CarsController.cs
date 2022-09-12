@@ -63,17 +63,26 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         {
             if(num > 64) return;
             dir = refObj.forward;
-            GameObject newcar = Instantiate(carNumPair[num], refObj.position, refObj.rotation);
+
+            CarElement carElement = refObj.GetComponent<CarElement>();
+            //carElement.canRaycast = false;
+            //Vector3 tilePos = carElement.tileOccupied.position;
+            //new Vector3(tilePos.x, refObj.position.y, tilePos.z)
+            GameObject newcar = Instantiate(carNumPair[num], new Vector3(refObj.position.x, refObj.position.y, refObj.position.z -0.75f), refObj.rotation);
+            //newcar.GetComponent<Collider>().enabled = false;
             SoundsController.instance.PlaySound(SoundsController.instance.merge);
 
             float origY = newcar.transform.position.y;
-            newcar.transform.DOLocalRotate(Vector3.one * 180, 0.5f).From();
-            newcar.transform.DOMoveY(newcar.transform.position.y + 3.5f, 0.5f).OnComplete(() =>
+            newcar.transform.DOLocalRotate(Vector3.one * 60, 0.5f).From();
+            newcar.transform.DOScale(Vector3.one * 0.3f, 0.5f).From();
+            newcar.transform.DOMoveY(newcar.transform.position.y + 2.5f, 0.5f).OnComplete(() =>
             {
                 newcar.transform.DOMoveY(origY, 0.5f);
+                //newcar.GetComponent<Collider>().enabled = true;
             });
             GameObject fx = Instantiate(mergeFx, refObj.position, Quaternion.identity);
             fx.transform.parent = newcar.transform;
+            refObj.gameObject.SetActive(false);
             if(newcar.GetComponent<CarElement>().num == targetCarNum)
                 MainController.instance.SetActionType(GameState.Levelwin);
         }

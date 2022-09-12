@@ -28,12 +28,12 @@ namespace _Cars_Merge._Scripts.ElementRelated
             _rb.position += _moveDir.normalized * moveSpeed * Time.fixedDeltaTime;
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("car"))
             {
                 _carElement.engineSmoke.SetActive(false);
-                if (_carElement.num != other.gameObject.GetComponent<CarElement>().num)
+                if (_carElement.num != other.gameObject.GetComponent<CarElement>().num && gameObject.layer != 3)
                 {
                     moveSpeed = 0;
                     _rb.isKinematic = true;
@@ -45,7 +45,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
                     Merge(other.gameObject);
             }
 
-            if (other.gameObject.CompareTag("wall"))
+            if (other.gameObject.CompareTag("wall") && gameObject.layer != 3)
             {
                 moveSpeed = 0;
                 _rb.isKinematic = true;
@@ -53,6 +53,12 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 gameObject.layer = 3;
                 PlayCrashEffect();
                 _carElement.engineSmoke.SetActive(false);
+
+                Vector3 origWallRot = other.transform.eulerAngles;
+                other.transform.DOLocalRotate(new Vector3(15, origWallRot.y, origWallRot.z), 0.25f).OnComplete(() =>
+                {
+                    other.transform.DOLocalRotate(new Vector3(0, origWallRot.y, origWallRot.z), 0.25f);
+                });
             }
         }
 
@@ -65,24 +71,23 @@ namespace _Cars_Merge._Scripts.ElementRelated
             mergeFx.transform.parent = null;
             mergeFx.SetActive(true);*/
             gameObject.SetActive(false);
-            otherCar.SetActive(false);
         }
 
         void PlayCrashEffect()
         {
+            //Vector3 origPos = GetComponent<CarElement>().tileOccupied.position;
+            Vector3 origPos = transform.position;
             if(transform.rotation.y < .5)
             {
-                float origZPos = transform.position.z;
-                transform.DOMoveZ(origZPos - 0.5f, 0.25f).OnComplete(() =>
+                transform.DOMoveZ(origPos.z - 0.5f, 0.25f).OnComplete(() =>
                 {
-                    transform.DOMoveZ(origZPos, 0.25f);
+                    transform.DOMoveZ(origPos.z, 0.25f);
                 });
             }else if(transform.rotation.y > .5)
             {
-                 float origXPos = transform.localPosition.x;
-                transform.DOLocalMoveX(origXPos - 0.5f, 0.25f).OnComplete(() =>
+                transform.DOLocalMoveX(origPos.x - 0.5f, 0.25f).OnComplete(() =>
                 {
-                    transform.DOLocalMoveX(origXPos, 0.25f);
+                    transform.DOLocalMoveX(origPos.x, 0.25f);
                 });
             }
             SoundsController.instance.PlaySound(SoundsController.instance.crash);

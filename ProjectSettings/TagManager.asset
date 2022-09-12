@@ -6,6 +6,8 @@ TagManager:
   tags:
   - car
   - wall
+  - FxTemporaire
+  - tile
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - static
   - Water
   - UI
-  - 
+  - car
   - 
   - 
   - 

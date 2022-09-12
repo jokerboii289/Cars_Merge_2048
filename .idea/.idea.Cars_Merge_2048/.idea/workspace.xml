@@ -20,105 +20,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07949576-a768-4753-8f52-0ea01dc54bed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/cloud_2x2_soft_AB.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Materials/Basics/cloud_2x2_soft_AB.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Environment.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Environment/Smoke.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Environment/Smoke/Dark.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Environment/Smoke/Dark/SmokeEngine.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Prefabs/Environment/Smoke/Dark/SmokeEngine.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/cloud_2x2_soft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Epic Toon FX/Textures/cloud_2x2_soft.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion second color map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion second color map.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion smoke alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion smoke alpha.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion smoke dissolve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr explosion smoke dissolve.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr proc glow soft invert add.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr proc glow soft invert add.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 ab.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 ab.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 dissolve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 dissolve.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 second color ab.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4 second color ab.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr smoke cloud x4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait hdr ab.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait hdr ab.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr stretch trait.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Glow.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Glow.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Procedural Ring.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Procedural Ring.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Ubershader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR Particle Ubershader.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_SETTINGS.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets/Shaders/CFXR_URP.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion Smoke 2 Solo (HDR).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion Smoke 2 Solo (HDR).prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/cloud.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/cloud.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/conf_basic.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/conf_basic.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/conf_basic_trail.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials other/conf_basic_trail.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/bouncy.physicMaterial" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/bouncy.physicMaterial.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/slippery.physicMaterial" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/slippery.physicMaterial.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fx/Merge Effect 2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fx/Merge Effect 2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fx/Tire Trail.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Fx/Tire Trail.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car green 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car green 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car green.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car green.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car pink.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car pink.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car red.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car red.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car wheel.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car wheel.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car widow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car widow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car yellow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/cars/car yellow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car Large.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car Large.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car Small.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car Small.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car xlarge.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/Car xlarge.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire #103.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire #103.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire #104.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire #104.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Cars/tire.obj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recordings/movie_005.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recordings/movie_006.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recordings/movie_007.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cars_Merge_2048/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.cginc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Toony Colors Pro/Demo TCP2/Common Demo Assets/Kino Bloom/Shader/Bloom.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/cloud.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/cloud.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/conf_basic.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/conf_basic.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/conf_basic_trail.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/conf_basic_trail.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/car.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/car.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion Smoke 2 Solo (HDR).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion Smoke 2 Solo (HDR).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/car yellow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/car yellow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car  - 5.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car  - 5.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 4.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 4.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 7.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car - 7.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car 6.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Cars/car 6.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 16.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 32.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 32.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 64.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 64.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cars/Car 8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fx/CFX_SmokeExplosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fx/CFX_SmokeExplosion.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/CarsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/ArrowElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/ArrowElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarMovementElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarMovementElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,10 +112,10 @@
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/SoundsController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarMovementElement.cs" />
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarElement.cs" />
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/ArrowElement.cs" />
         <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ControllerRelated/CarsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Cars_Merge/_Scripts/ElememtRelated/CarMovementElement.cs" />
       </list>
     </option>
   </component>
@@ -197,5 +164,11 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="758" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1662993770840">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="208" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1662993770840" />
   </component>
 </project>

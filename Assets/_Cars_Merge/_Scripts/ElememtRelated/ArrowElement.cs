@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _Cars_Merge._Scripts.ControllerRelated;
 using _Draw_Copy._Scripts.ControllerRelated;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Cars_Merge._Scripts.ElementRelated
@@ -45,6 +46,10 @@ namespace _Cars_Merge._Scripts.ElementRelated
             CarsController.instance.SpawnCar(transform);
             MainController.instance.SetActionType(GameState.Movement);
             SoundsController.instance.PlaySound(SoundsController.instance.arrowTap);
+            transform.DOScale(0.2f, 0.25f).OnComplete(() =>
+            {
+                transform.DOScale(0.5f, 0.25f);
+            });
         }
     
     }   

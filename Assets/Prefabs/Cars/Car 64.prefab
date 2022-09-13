@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492727540969107207}
   - component: {fileID: 492727540969107200}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Num bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 492727542090577887}
   - component: {fileID: 492727542090577886}
   - component: {fileID: 492727542090577885}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 492727542379257224}
   - component: {fileID: 492727542398699216}
   - component: {fileID: 492727542398626404}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SmokeEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5007,7 +5007,7 @@ GameObject:
   - component: {fileID: 727310204520259865}
   - component: {fileID: 727310204520260324}
   - component: {fileID: 727310204520259867}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Car 64
   m_TagString: car
   m_Icon: {fileID: 0}
@@ -5026,9 +5026,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8466330291923129337}
   - {fileID: 492727540969107207}
   - {fileID: 492727542379257224}
-  - {fileID: 8466330291923129337}
   - {fileID: 3707777091152016946}
   - {fileID: 3379912851889400046}
   m_Father: {fileID: 0}
@@ -5061,8 +5061,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.837717, y: 2.3444417, z: 6.2202616}
-  m_Center: {x: 0, y: 1.3007792, z: -1.5640001}
+  m_Size: {x: 2.1445184, y: 2.3444417, z: 5.9309688}
+  m_Center: {x: 0, y: 1.3007792, z: -1.5703228}
 --- !u!114 &727310204520260324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5104,7 +5104,7 @@ GameObject:
   - component: {fileID: 8466330291923129337}
   - component: {fileID: 2709172210227553587}
   - component: {fileID: 2791516576845921486}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: body_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5187,7 +5187,7 @@ GameObject:
   - component: {fileID: 3379912851889400046}
   - component: {fileID: 5069376442902935845}
   - component: {fileID: 8804876890162889527}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tire_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5270,7 +5270,7 @@ GameObject:
   - component: {fileID: 3707777091152016946}
   - component: {fileID: 7095106716002952153}
   - component: {fileID: 1304875236394088260}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: window
   m_TagString: Untagged
   m_Icon: {fileID: 0}

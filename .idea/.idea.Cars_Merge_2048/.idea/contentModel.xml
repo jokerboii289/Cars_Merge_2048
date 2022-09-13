@@ -4,7 +4,9 @@
     <e p="C:\Users\ADMIN\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
     <e p="C:\Users\ADMIN\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Cars_Merge_2048.-1739384722.00" t="ExcludeRecursive" />
     <e p="D:\Projects\Cars_Merge_2048" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Cars_Merge" t="Include">
@@ -20,6 +22,7 @@
               <e p="ArrowElement.cs" t="Include" />
               <e p="CarElement.cs" t="Include" />
               <e p="CarMovementElement.cs" t="Include" />
+              <e p="FloorEffectElement.cs" t="Include" />
             </e>
             <e p="Singleton.cs" t="Include" />
             <e p="Vibration.cs" t="Include" />
@@ -357,6 +360,90 @@
                   <e p="Water WindWaker2.shader" t="Include" />
                 </e>
               </e>
+            </e>
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Easy performant outline" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Models for Demo scene" t="Include">
+                <e p="2d city" t="Include">
+                  <e p="License free.txt" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="BubbleSpot.cs" t="Include" />
+                <e p="CameraController.cs" t="Include" />
+                <e p="Character.cs" t="Include" />
+                <e p="Chicken.cs" t="Include" />
+                <e p="Doughnut.cs" t="Include" />
+                <e p="ICollectable.cs" t="Include" />
+                <e p="InteractableObject.cs" t="Include" />
+                <e p="UsecaseSwitcher.cs" t="Include" />
+              </e>
+              <e p="Sounds" t="Include">
+                <e p="Third-Party Notices.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Resources" t="Include">
+              <e p="Easy performant outline" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="BasicBlit.shader" t="Include" />
+                  <e p="Blur.shader" t="Include" />
+                  <e p="ClearStencil.shader" t="Include" />
+                  <e p="Dilate.shader" t="Include" />
+                  <e p="EdgeDilate.shader" t="Include" />
+                  <e p="Fills" t="Include">
+                    <e p="ColorFill.shader" t="Include" />
+                    <e p="Dots.shader" t="Include" />
+                    <e p="EmptyFill.shader" t="Include" />
+                    <e p="FillMask.shader" t="Include" />
+                    <e p="Fresnel.shader" t="Include" />
+                    <e p="Interlaced.shader" t="Include" />
+                  </e>
+                  <e p="FinalBlit.shader" t="Include" />
+                  <e p="MiskCG.cginc" t="Include" />
+                  <e p="Obstacle.shader" t="Include" />
+                  <e p="Outline.shader" t="Include" />
+                  <e p="OutlineMask.shader" t="Include" />
+                  <e p="PartialBlit.shader" t="Include" />
+                  <e p="TransparentBlit.shader" t="Include" />
+                  <e p="ZPrepass.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="BlitUtility.cs" t="Include" />
+              <e p="BlurType.cs" t="Include" />
+              <e p="CameraUtility.cs" t="Include" />
+              <e p="CustomTargetBlitter.cs" t="Include" />
+              <e p="DOTween support" t="Include">
+                <e p="DOTweenEPO.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="EPOSetuper.cs" t="Include" />
+                <e p="ModelPostprocessor.cs" t="Include" />
+                <e p="OutlinableEditor.cs" t="Include" />
+                <e p="OutlinePropertiesPropertyDrawer.cs" t="Include" />
+                <e p="OutlinerEditor.cs" t="Include" />
+                <e p="OutlineTargetPropertyDrawer.cs" t="Include" />
+                <e p="SerializedPassPropertyDrawer.cs" t="Include" />
+              </e>
+              <e p="KeywordsUtility.cs" t="Include" />
+              <e p="OnPreRenderEventTransferer.cs" t="Include" />
+              <e p="Outlinable.cs" t="Include" />
+              <e p="OutlineCustomPass.cs" t="Include" />
+              <e p="OutlineEffect.cs" t="Include" />
+              <e p="OutlineParameters.cs" t="Include" />
+              <e p="Outliner.cs" t="Include" />
+              <e p="OutlineTarget.cs" t="Include" />
+              <e p="PipelineAssetUtility.cs" t="Include" />
+              <e p="RendererFilteringUtility.cs" t="Include" />
+              <e p="RenderTargetUtility.cs" t="Include" />
+              <e p="SerializedPass.cs" t="Include" />
+              <e p="TargetsHolder.cs" t="Include" />
+              <e p="TargetStateListener.cs" t="Include" />
+              <e p="URPOutlineFeature.cs" t="Include" />
             </e>
           </e>
         </e>

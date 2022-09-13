@@ -52,7 +52,7 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         void CreateGame()
         {
             GameState = GameState.Create;
-            DOVirtual.DelayedCall(.5f, () =>
+            DOVirtual.DelayedCall(1.85f, () =>
             {
                 GameState = GameState.Input;
             });

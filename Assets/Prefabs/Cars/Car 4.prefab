@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6571131480330985196}
   - component: {fileID: 2682992135437708725}
   - component: {fileID: 2217167899376173055}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: body_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5908393838335745498}
   - component: {fileID: 5189704036812045722}
   - component: {fileID: 7271370530783358130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Car 4
   m_TagString: car
   m_Icon: {fileID: 0}
@@ -150,8 +150,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8398194, y: 1.8593266, z: 3.0231056}
-  m_Center: {x: 0, y: 0.847906, z: 0.059000015}
+  m_Size: {x: 1.8328058, y: 1.8593266, z: 2.942453}
+  m_Center: {x: 0, y: 0.847906, z: 0.04897809}
 --- !u!114 &5189704036812045722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 6476997987071715211}
   - component: {fileID: 1381434850535912046}
   - component: {fileID: 2665915879949238133}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SmokeEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 6115464044991735160}
   - component: {fileID: 5831384744785697830}
   - component: {fileID: 2494209036148820201}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5012,7 +5012,7 @@ GameObject:
   - component: {fileID: 7367512801823566372}
   - component: {fileID: 6596678411391812612}
   - component: {fileID: 1413098534750444284}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,7 +5095,7 @@ GameObject:
   - component: {fileID: 6758738241004181467}
   - component: {fileID: 3632670385556071296}
   - component: {fileID: 1047827530110412371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5267,7 +5267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594950775364393578}
   - component: {fileID: 8037804629322938669}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Num bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

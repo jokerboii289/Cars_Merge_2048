@@ -53,7 +53,7 @@ namespace _Draw_Copy._Scripts.ControllerRelated
 
         IEnumerator LevelWon()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
             HUD.SetActive(false);
             winConfetti.SetActive(true);
             SoundsController.instance.PlaySound(SoundsController.instance.confetti);

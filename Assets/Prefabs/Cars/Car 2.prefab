@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5122555124978684092}
   - component: {fileID: 1724988543458748022}
   - component: {fileID: 1501387237944786827}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: body_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5146970541543816628}
   - component: {fileID: 5146970541543816777}
   - component: {fileID: 5146970541543816630}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Car 2
   m_TagString: car
   m_Icon: {fileID: 0}
@@ -150,8 +150,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8716779, y: 1.8808107, z: 3.1295993}
-  m_Center: {x: 0, y: 0.8628478, z: 0.061831236}
+  m_Size: {x: 1.841636, y: 1.8808107, z: 2.9755762}
+  m_Center: {x: 0, y: 0.8628478, z: 0.05629623}
 --- !u!114 &5146970541543816777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5452979133593154474}
   - component: {fileID: 5452979133593154477}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Num bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 5452979134754990962}
   - component: {fileID: 5452979134754990963}
   - component: {fileID: 5452979134754990960}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 3512220083902577653}
   - component: {fileID: 6341136849210321470}
   - component: {fileID: 7235879131782631468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 79975911976433015}
   - component: {fileID: 5773170257017118876}
   - component: {fileID: 2338304065130869761}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 199316, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 199316, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
       propertyPath: m_IsActive

@@ -25,25 +25,75 @@ namespace _Cars_Merge._Scripts.ElementRelated
 
         void FixedUpdate()
         {
-            _rb.position += _moveDir.normalized * moveSpeed * Time.fixedDeltaTime;
+            _rb.position += transform.forward * moveSpeed * Time.fixedDeltaTime;
+        }
+
+        private void Update()
+        {
+            //front raycast
+            /*RaycastHit frontHit;
+            Physics.Raycast(transform.position, transform.forward, out frontHit, 3.5f);
+
+            Debug.DrawRay(transform.position, transform.forward * 3.5f, Color.magenta);
+
+            RaycastHit rightHit;
+            Physics.Raycast(transform.position, transform.right, out rightHit, 3.5f);
+
+            Debug.DrawRay(transform.position, transform.right * 3.5f, Color.magenta);
+
+            RaycastHit lefttHit;
+            Physics.Raycast(transform.position, -transform.right, out rightHit, 3.5f);
+
+            Debug.DrawRay(transform.position, -transform.right * 3.5f, Color.magenta);*/
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("car"))
+            _carElement.engineSmoke.SetActive(false);
+            CarElement otherCarElement = other.gameObject.GetComponent<CarElement>();
+
+            if (otherCarElement)
             {
-                _carElement.engineSmoke.SetActive(false);
-                if (_carElement.num != other.gameObject.GetComponent<CarElement>().num && gameObject.layer != 3)
+                if (gameObject.layer != 3)
                 {
-                    moveSpeed = 0;
-                    _rb.isKinematic = true;
-                    MainController.instance.SetActionType(GameState.Input);
-                    gameObject.layer = 3;
-                    PlayCrashEffect();
+                    if (otherCarElement.num == _carElement.num && other.gameObject.layer == 3)
+                    {
+                        Merge(other.gameObject);
+                    }
+                    else if (otherCarElement.num != _carElement.num && other.gameObject.layer == 3)
+                    {
+                        moveSpeed = 0;
+                        _rb.isKinematic = true;
+                        MainController.instance.SetActionType(GameState.Input);
+                        gameObject.layer = 3;
+                        PlayCrashEffect();
+                    }
                 }
-                else if(_carElement.num == other.gameObject.GetComponent<CarElement>().num && other.gameObject.layer == 3)
-                    Merge(other.gameObject);
             }
+            else if(other.gameObject.CompareTag("wall"))
+            {
+                moveSpeed = 0;
+                _rb.isKinematic = true;
+                MainController.instance.SetActionType(GameState.Input);
+                gameObject.layer = 3;
+                PlayCrashEffect();
+                Vector3 origWallRot = other.transform.eulerAngles;
+                other.transform.DOLocalRotate(new Vector3(15, origWallRot.y, origWallRot.z), 0.25f).OnComplete(() =>
+                {
+                    other.transform.DOLocalRotate(new Vector3(0, origWallRot.y, origWallRot.z), 0.25f);
+                });
+            }
+
+            /*if (_carElement.num != other.gameObject.GetComponent<CarElement>().num && gameObject.layer != 3)
+            {
+                moveSpeed = 0;
+                _rb.isKinematic = true;
+                MainController.instance.SetActionType(GameState.Input);
+                gameObject.layer = 3;
+                PlayCrashEffect();
+            }
+            else if (_carElement.num == other.gameObject.GetComponent<CarElement>().num && other.gameObject.layer == 3)
+                Merge(other.gameObject);
 
             if (other.gameObject.CompareTag("wall") && gameObject.layer != 3)
             {
@@ -59,14 +109,14 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 {
                     other.transform.DOLocalRotate(new Vector3(0, origWallRot.y, origWallRot.z), 0.25f);
                 });
-            }
+            }*/
         }
 
         void Merge(GameObject otherCar)
         {
             GetComponent<Collider>().enabled = false;
             otherCar.GetComponent<Collider>().enabled = false;
-            CarsController.instance.SetupMergedCar(otherCar.transform, _carElement.num * 2);
+            CarsController.instance.SetupMergedCar(transform, otherCar.transform, _carElement.num * 2);
             /*GameObject mergeFx = otherCar.GetComponent<CarElement>().mergeFx;
             mergeFx.transform.parent = null;
             mergeFx.SetActive(true);*/
@@ -75,21 +125,23 @@ namespace _Cars_Merge._Scripts.ElementRelated
 
         void PlayCrashEffect()
         {
-            //Vector3 origPos = GetComponent<CarElement>().tileOccupied.position;
-            Vector3 origPos = transform.position;
-            if(transform.rotation.y < .5)
+            //_carElement.canRaycast = true;
+            Vector3 origPos = new Vector3();
+            if (!GetComponent<CarElement>().tileOccupied) return;
+            origPos = GetComponent<CarElement>().tileOccupied.position;
+            //Vector3 origPos = transform.position;
+            if (transform.rotation.y < .5)
             {
-                transform.DOMoveZ(origPos.z - 0.5f, 0.25f).OnComplete(() =>
-                {
-                    transform.DOMoveZ(origPos.z, 0.25f);
-                });
-            }else if(transform.rotation.y > .5)
+                transform.DOMoveZ(origPos.z - 0.5f, 0.25f).OnComplete(() => { transform.DOMoveZ(origPos.z, 0.25f); });
+            }
+            else if (transform.rotation.y > .5)
             {
                 transform.DOLocalMoveX(origPos.x - 0.5f, 0.25f).OnComplete(() =>
                 {
                     transform.DOLocalMoveX(origPos.x, 0.25f);
                 });
             }
+
             SoundsController.instance.PlaySound(SoundsController.instance.crash);
         }
     }

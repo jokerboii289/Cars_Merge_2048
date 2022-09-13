@@ -12,6 +12,8 @@ namespace _Cars_Merge._Scripts.ControllerRelated
     {
         public static GameController instance;
 
+        public List<Transform> arrows;
+
         private void Awake()
         {
             instance = this;
@@ -32,9 +34,17 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         }
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
         {
-            if(newState==GameState.Create)
+            if(newState==GameState.Levelwin)
             {
-                
+                for (int i = 0; i < arrows.Count; i++)
+                {
+                    arrows[i].DOScale(Vector3.zero, 1f);
+                    Vector3 arrowRot = arrows[i].transform.eulerAngles;
+                    arrows[i].DORotate(new Vector3(arrowRot.x, arrowRot.y + 90, arrowRot.z), 1f).OnComplete(() =>
+                    {
+                        arrows[i].gameObject.SetActive(false);
+                    });
+                }
             }
         }
 

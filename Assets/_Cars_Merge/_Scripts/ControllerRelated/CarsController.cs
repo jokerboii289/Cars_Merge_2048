@@ -57,19 +57,25 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             int carNum = currentCar.GetComponent<CarElement>().num;
             nextCarNumText.text = carNum.ToString();
             nextCarImg.sprite = carImgPair[carNum];
-            nextCarImg.GetComponent<RectTransform>().DOAnchorPos(new Vector2(122f, -177f), 0.25f).From();
+            nextCarImg.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-107, 181f), 0.25f).From();
         }
-        public void SetupMergedCar(Transform refObj, int num)
+        public void SetupMergedCar(Transform collidingCar, Transform targetCar, int num)
         {
             if(num > 64) return;
-            dir = refObj.forward;
+            dir = targetCar.forward;
 
-            CarElement carElement = refObj.GetComponent<CarElement>();
-            //carElement.canRaycast = false;
-            //Vector3 tilePos = carElement.tileOccupied.position;
-            //new Vector3(tilePos.x, refObj.position.y, tilePos.z)
-            GameObject newcar = Instantiate(carNumPair[num], new Vector3(refObj.position.x, refObj.position.y, refObj.position.z -0.75f), refObj.rotation);
-            //newcar.GetComponent<Collider>().enabled = false;
+            CarElement carElement = targetCar.GetComponent<CarElement>();
+            Vector3 tilePos = carElement.tileOccupied.position;
+            
+            //calculating spawn rotation
+            Vector3 spawnDir = targetCar.GetComponent<CarElement>().tileOccupied.position - collidingCar.GetComponent<CarElement>().tileOccupied.position;
+            Vector3 spawnAngle = new Vector3();
+            if(spawnDir.z == 0) spawnAngle = Vector3.up * 90;
+            else if(spawnAngle.x == 0) spawnAngle = Vector3.zero;
+            
+            GameObject newcar = Instantiate(carNumPair[num], new Vector3(tilePos.x, targetCar.position.y, tilePos.z), Quaternion.Euler(spawnAngle));
+            newcar.GetComponent<Collider>().enabled = false;
+            newcar.GetComponent<CarMovementElement>().enabled = false;
             SoundsController.instance.PlaySound(SoundsController.instance.merge);
 
             float origY = newcar.transform.position.y;
@@ -78,17 +84,28 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             newcar.transform.DOMoveY(newcar.transform.position.y + 2.5f, 0.5f).OnComplete(() =>
             {
                 newcar.transform.DOMoveY(origY, 0.5f);
-                //newcar.GetComponent<Collider>().enabled = true;
+                newcar.GetComponent<Collider>().enabled = true;
+                newcar.GetComponent<CarMovementElement>().enabled = true;
             });
-            GameObject fx = Instantiate(mergeFx, refObj.position, Quaternion.identity);
+            GameObject fx = Instantiate(mergeFx, targetCar.position, Quaternion.identity);
             fx.transform.parent = newcar.transform;
-            refObj.gameObject.SetActive(false);
-            if(newcar.GetComponent<CarElement>().num == targetCarNum)
-                MainController.instance.SetActionType(GameState.Levelwin);
+            targetCar.gameObject.SetActive(false);
+            if (newcar.GetComponent<CarElement>().num == targetCarNum)
+            {
+                Material finalCarMat = newcar.transform.GetChild(0).GetComponent<Renderer>().material;
+                Color origColor = finalCarMat.color;
+                var sequence = DOTween.Sequence();
+                sequence.Append(finalCarMat.DOColor(Color.black, 0.5f));
+                sequence.Append(finalCarMat.DOColor(origColor, 0.5f));
+                sequence.Append(finalCarMat.DOColor(Color.black, 0.5f));
+                sequence.Append(finalCarMat.DOColor(origColor, 0.5f));
+                
+                MainController.instance.SetActionType(GameState.Levelwin);   
+            }
         }
         public GameObject GetCurrentCar()
         {
-            return cars[Random.Range(0, cars.Count)];
+            return cars[Random.Range(0, cars.Count -1 )];
         }
     }   
 }

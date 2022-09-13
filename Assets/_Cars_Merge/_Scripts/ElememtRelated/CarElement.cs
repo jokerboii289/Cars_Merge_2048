@@ -15,31 +15,30 @@ namespace _Cars_Merge._Scripts.ElementRelated
         public bool canRaycast;
 
         private Vector3 _rayPos;
-
+        
         private void Start()
         {
             numText.text = num.ToString();
             canRaycast = true;
-            _rayPos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
         }
 
-        /*private void Update()
+        private void Update()
         {
-            RaycastHit hit;
-            Debug.DrawRay(_rayPos, Vector3.down * 5, Color.green);
-            if (Physics.Raycast(_rayPos, Vector3.down, out hit, 5))
-            {
-                    
-                if (hit.collider.name.Contains("Tile"))
-                {
-                    tileOccupied = hit.collider.transform;
-                    print("tile detected !!!");
-                }
-            }
             if (canRaycast)
             {
-                   
+                _rayPos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+                RaycastHit hit;
+                if (Physics.Raycast(_rayPos, Vector3.down, out hit, 5))
+                {
+                    Debug.DrawRay(_rayPos, Vector3.down * 5, Color.green);
+                    
+                    if (hit.collider.transform.CompareTag("tile"))
+                    {
+                        tileOccupied = hit.collider.transform;
+                        //print("tile detected !!!");
+                    }
+                }          
             }
-        }*/
+        }
     }   
 }

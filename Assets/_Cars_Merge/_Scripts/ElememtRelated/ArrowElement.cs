@@ -42,7 +42,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
         private bool _canInstantiate;
         private void OnMouseDown()
         {
-            if(!_canInstantiate) return;
+            if(!_canInstantiate || MainController.instance.GameState == GameState.Levelwin) return;
             CarsController.instance.SpawnCar(transform);
             MainController.instance.SetActionType(GameState.Movement);
             SoundsController.instance.PlaySound(SoundsController.instance.arrowTap);

@@ -1,19 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Cars_Merge._Scripts.ControllerRelated;
 using _Cars_Merge._Scripts.ElementRelated;
 using _Draw_Copy._Scripts.ControllerRelated;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
-namespace _Cars_Merge._Scripts.ControllerRelated
+namespace _Cars_Merge._Scripts.Ambulance
 {
-    public class CarsController : MonoBehaviour
-    {
-        public static CarsController instance;
+ public class AmbulanceController : MonoBehaviour
+{
+    public static AmbulanceController instance;
         
         public List<GameObject> cars;
         public List<Sprite> carSprites;
@@ -27,7 +26,6 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         
         public Dictionary<int, GameObject> carNumPair = new Dictionary<int, GameObject>();
         public Dictionary<int, Sprite> carImgPair = new Dictionary<int, Sprite>();
-        public int targetCarNum;
         public GameObject mergeFx;
 
         private void Awake()
@@ -46,8 +44,6 @@ namespace _Cars_Merge._Scripts.ControllerRelated
                 value *= 2;
             }
             SetCarInUI();
-            targetNumText.text = targetCarNum.ToString();
-            targetCarImg.sprite = carImgPair[targetCarNum];
         }
         
         //By arrow click
@@ -98,10 +94,6 @@ namespace _Cars_Merge._Scripts.ControllerRelated
             GameObject fx = Instantiate(mergeFx, targetCar.position, Quaternion.identity);
             fx.transform.parent = newcar.transform;
             targetCar.gameObject.SetActive(false);
-            if (newcar.GetComponent<CarElement>().num == targetCarNum)
-            {
-                StartCoroutine(TargetCarFx(newcar));
-            }
         }
         public GameObject GetCurrentCar()
         {
@@ -123,5 +115,5 @@ namespace _Cars_Merge._Scripts.ControllerRelated
                 
             MainController.instance.SetActionType(GameState.Levelwin);   
         }
-    }   
+    }
 }

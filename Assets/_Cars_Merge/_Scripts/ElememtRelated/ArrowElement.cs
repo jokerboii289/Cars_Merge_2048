@@ -50,6 +50,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
             {
                 transform.DOScale(0.5f, 0.25f);
             });
+            Vibration.Vibrate(27);
         }
     
     }   

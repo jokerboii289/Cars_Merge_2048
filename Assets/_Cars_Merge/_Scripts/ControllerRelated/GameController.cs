@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Cars_Merge._Scripts.ControllerRelated;
+using _Cars_Merge._Scripts.ElementRelated;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,8 +12,9 @@ namespace _Cars_Merge._Scripts.ControllerRelated
     public class GameController : MonoBehaviour
     {
         public static GameController instance;
+        public bool ambulanceLevel;
 
-        public List<Transform> arrows;
+        List<Transform> arrows;
 
         private void Awake()
         {
@@ -34,6 +36,7 @@ namespace _Cars_Merge._Scripts.ControllerRelated
         }
         void GameManager_GameStateChanged(GameState newState, GameState oldState)
         {
+            arrows = FloorEffectElement.instance.arrows;
             if(newState==GameState.Levelwin)
             {
                 for (int i = 0; i < arrows.Count; i++)

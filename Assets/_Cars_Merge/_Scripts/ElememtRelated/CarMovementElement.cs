@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Cars_Merge._Scripts.Ambulance;
 using _Cars_Merge._Scripts.ControllerRelated;
 using _Draw_Copy._Scripts.ControllerRelated;
 using DG.Tweening;
@@ -59,6 +60,7 @@ namespace _Cars_Merge._Scripts.ElementRelated
                     if (otherCarElement.num == _carElement.num && other.gameObject.layer == 3)
                     {
                         Merge(other.gameObject);
+                        Vibration.Vibrate(27);
                     }
                     else if (otherCarElement.num != _carElement.num && other.gameObject.layer == 3)
                     {
@@ -82,6 +84,11 @@ namespace _Cars_Merge._Scripts.ElementRelated
                 {
                     other.transform.DOLocalRotate(new Vector3(0, origWallRot.y, origWallRot.z), 0.25f);
                 });
+                Vibration.Vibrate(17);
+            }
+            else if (other.gameObject.CompareTag("Finish"))
+            {
+                MainController.instance.SetActionType(GameState.Input);
             }
 
             /*if (_carElement.num != other.gameObject.GetComponent<CarElement>().num && gameObject.layer != 3)
@@ -116,7 +123,10 @@ namespace _Cars_Merge._Scripts.ElementRelated
         {
             GetComponent<Collider>().enabled = false;
             otherCar.GetComponent<Collider>().enabled = false;
-            CarsController.instance.SetupMergedCar(transform, otherCar.transform, _carElement.num * 2);
+            if(!GameController.instance.ambulanceLevel) 
+                CarsController.instance.SetupMergedCar(transform, otherCar.transform, _carElement.num * 2);
+            else
+                AmbulanceController.instance.SetupMergedCar(transform, otherCar.transform, _carElement.num * 2);
             /*GameObject mergeFx = otherCar.GetComponent<CarElement>().mergeFx;
             mergeFx.transform.parent = null;
             mergeFx.SetActive(true);*/

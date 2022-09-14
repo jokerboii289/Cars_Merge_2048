@@ -11,6 +11,10 @@
       <e p="Assets" t="Include">
         <e p="_Cars_Merge" t="Include">
           <e p="_Scripts" t="Include">
+            <e p="Ambulance" t="Include">
+              <e p="AmbulanceController.cs" t="Include" />
+              <e p="CarMovement.cs" t="Include" />
+            </e>
             <e p="ControllerRelated" t="Include">
               <e p="CarsController.cs" t="Include" />
               <e p="GameController.cs" t="Include" />
@@ -24,7 +28,9 @@
               <e p="CarMovementElement.cs" t="Include" />
               <e p="FloorEffectElement.cs" t="Include" />
             </e>
-            <e p="Singleton.cs" t="Include" />
+            <e p="GamelayRelated" t="Include">
+              <e p="Help.cs" t="Include" />
+            </e>
             <e p="Vibration.cs" t="Include" />
           </e>
         </e>

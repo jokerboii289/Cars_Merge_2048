@@ -9,9 +9,17 @@ namespace _Cars_Merge._Scripts.ElementRelated
 {
     public class FloorEffectElement : MonoBehaviour
     {
+        public static FloorEffectElement instance;
+        
         public List<Transform> tiles;
         public List<Transform> arrows;
+        public List<Transform> walls;
  
+        private void Awake()
+        {
+            instance = this;
+        }
+
         private void Start()
         {
             StartCoroutine(TileEffect());
@@ -19,13 +27,17 @@ namespace _Cars_Merge._Scripts.ElementRelated
 
         IEnumerator TileEffect()
         {
+            for (int i = 0; i < walls.Count; i++)
+            {
+                Vector3 origAngle = walls[i].transform.eulerAngles;
+                walls[i].DORotate(new Vector3(60, origAngle.y, origAngle.z), 0.25f).From();
+            }
             for (int i = 0; i < tiles.Count; i++)
             {
                 tiles[i].transform.DORotate(Vector3.right * 45, 0.25f).From();
                 yield return new WaitForSeconds(0.05f);
             }
-            yield return new WaitForSeconds(0.5f);
-            arrows = GameController.instance.arrows;
+            yield return new WaitForSeconds(0.4f);
             for (int i = 0; i < arrows.Count; i++)
             {
                 Vector3 origAngle = arrows[i].transform.eulerAngles;
